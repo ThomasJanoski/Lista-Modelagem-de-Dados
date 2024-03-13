@@ -1,3 +1,19 @@
+DROP TABLE IF EXISTS Petshop_Cliente;
+DROP TABLE IF EXISTS Petshop_Pets;
+DROP TABLE IF EXISTS ProdutoraGames_Desenvolvedor;
+DROP TABLE IF EXISTS ProdutoraGames_Projetos;
+DROP TABLE IF EXISTS Montadora_Carros;
+DROP TABLE IF EXISTS Montadora_Empresa;
+DROP TABLE IF EXISTS Biblioteca_Autores;
+DROP TABLE IF EXISTS Biblioteca_Livros;
+DROP TABLE IF EXISTS Videoteca_Filmes;
+DROP TABLE IF EXISTS Videoteca_Atores;
+DROP TABLE IF EXISTS Videoteca_Diretores;
+DROP TABLE IF EXISTS Supermercado_Marcas;
+DROP TABLE IF EXISTS Supermercado_Produtos;
+DROP TABLE IF EXISTS Alunos;
+DROP TABLE IF EXISTS Colaboladores;
+
 CREATE TABLE Petshop_Cliente (
     ID       INT PRIMARY KEY,
     Nome     VARCHAR(50),
@@ -27,7 +43,7 @@ INSERT INTO Petshop_Pets (ID , Nome, Especie, DataNasc) VALUES
 (03, "Penélope", "Coelho", DATE("2018-02-02")),
 (04, "Thor", "Hamster", DATE("2021-11-15")),
 (05, "Luna", "Papagaio", DATE("2017-05-30")),
-(06, "Rex", "Iguana", DATE("2022-08-08"))
+(06, "Rex", "Iguana", DATE("2022-08-08"));
 
 CREATE TABLE ProdutoraGames_Desenvolvedor (
     ID       INT PRIMARY KEY,
@@ -40,7 +56,7 @@ CREATE TABLE ProdutoraGames_Projetos (
     ID          INT PRIMARY KEY,
     Nome        VARCHAR(50),
     Genero      VARCHAR(20),
-    FaixaEtaria VARCHAR(10)
+    FaixaEtaria VARCHAR(10),
     DataLanc    DATE
 );
 
@@ -60,12 +76,11 @@ INSERT INTO ProdutoraGames_Projetos (ID , Nome, Genero, FaixaEtaria, DataLanc) V
 (05, "Risadas ao Entardecer", "Comédia", "+10", DATE("2023-11-30")),
 (06, "Estrelas Além do Tempo", "Ficção Científica", "+16", DATE("2023-09-14"));
 
-
 CREATE TABLE Biblioteca_Autores (
     ID            INT PRIMARY KEY,
     Nome          VARCHAR(50),
     Email         VARCHAR(11),
-    Nacionalidade VARCHAR(10)
+    Nacionalidade VARCHAR(10),
     DataNasc      DATE
 );
 
@@ -73,7 +88,7 @@ CREATE TABLE Biblioteca_Livros (
     ID          INT PRIMARY KEY,
     Nome        VARCHAR(50),
     Genero      VARCHAR(20),
-    FaixaEtaria VARCHAR(10)
+    FaixaEtaria VARCHAR(10),
     DataLanc    DATE
 );
 
@@ -162,13 +177,13 @@ CREATE TABLE Videoteca_Filmes (
 CREATE TABLE Videoteca_Diretores (
     Nome          VARCHAR(20),
     DataNasc      DATE,
-    Nacionalidade VARCHAR(1O)
+    Nacionalidade VARCHAR(10)
 );
 
 CREATE TABLE Videoteca_Atores (
      Nome          VARCHAR(20),
     DataNasc      DATE,
-    Nacionalidade VARCHAR(1O)
+    Nacionalidade VARCHAR(10)
 );
 
 INSERT INTO Videoteca_Filmes (Titulo, Preco, Duracao, IdiomaOriginal) VALUES 
@@ -195,7 +210,7 @@ INSERT INTO Videoteca_Atores (Nome, DataNasc, Nacionalidade) VALUES
 ("Michael Brown", DATE("1976-03-03"), "Australiana"),
 ("Li Wei", DATE("1991-07-29"), "Chinesa");
 
-CREATE TABLE Aluno (
+CREATE TABLE Alunos (
     RA       INT PRIMARY KEY,
     Nome     VARCHAR(20),
     Email    VARCHAR(30),
@@ -203,7 +218,7 @@ CREATE TABLE Aluno (
     DataNasc DATE
 );
 
-INSERT INTO Aluno (RA, Nome, Email, Endereco,, DataNasc) VALUES
+INSERT INTO Alunos (RA, Nome, Email, Endereco, DataNasc) VALUES
 (123456, "João Silva", "joao.silva@escolaexemplo.edu.br", "Rua das Flores, 123, São Paulo, SP", DATE("2005-04-10")),
 (789101, "Maria Oliveira", "maria.oliveira@escolaexemplo.edu.br", "Avenida Brasil, 456, Rio da Janeiro, RJ", DATE("2000-08-22")),
 (112131, "Pedro Costa", "pedro.costa@escolaexemplo.edu.br", "Praça da Sé, 789, Salvador, BA", DATE("2004-01-15")),
@@ -220,7 +235,7 @@ CREATE TABLE Colaboradores (
 );
 
 INSERT INTO Colaboradores (ID, Nome, CPF, Cargo, Salario) VALUES 
-(001, "Roberto da Luz", "123.456.789-00", "Analista de Sistemas", 7500.00),
+(001, "Roberto da Luz", "123.456.78Q9-00", "Analista de Sistemas", 7500.00),
 (002, "Fernanda Gomes", "987.654.321-11", "Gerente de Projetos", 9000.00),
 (003, "Carlos Pereira", "111.222.333-44", "Desenvolvedor Front-end", 6200.00),
 (004, "Patricia Almeida", "555.666.777-88", "UX/UI Designer", 6800.00),
