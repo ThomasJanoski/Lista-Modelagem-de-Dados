@@ -1,1 +1,2 @@
-Repositório contendo SQL para Lista - Modelagem de Dados
+## Lista - Modelagem de Dados
+Repositório contendo arquivo **SQL** para atividade.
